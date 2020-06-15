@@ -50,3 +50,15 @@ module.exports = withSVG({
   },
 });
 ```
+
+## TypeScript
+
+TypeScript doesn't know how interpret imported svgs.
+**you need to add reference to our types** (third line) into your `next-env.d.ts` file.
+
+```diff
+/// <reference types="next" />
+/// <reference types="next/types/global" />
+
++ /// <reference types="@mcansh/next-svgr" />
+```
