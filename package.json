@@ -6,7 +6,7 @@
   "repository": "mcansh/next-svgr",
   "author": "Logan McAnsh <logan@mcan.sh> (https://mcan.sh)",
   "license": "MIT",
-  "typings": "index.d.ts",
+  "types": "index.d.ts",
   "peerDependencies": {
     "@svgr/webpack": "5.4.0",
     "next": "9.4.4"
