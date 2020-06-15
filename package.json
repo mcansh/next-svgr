@@ -1,6 +1,6 @@
 {
   "name": "@mcansh/next-svgr",
-  "version": "1.0.4",
+  "version": "1.1.0",
   "description": "easily use @svgr/webpack with next.js",
   "main": "index.js",
   "repository": "mcansh/next-svgr",
