@@ -1,0 +1,13 @@
+{
+  "name": "@mcansh/next-svgr",
+  "version": "1.0.0",
+  "description": "easily use @svgr/webpack with next.js",
+  "main": "index.js",
+  "repository": "mcansh/next-svgr",
+  "author": "Logan McAnsh <logan@mcan.sh> (https://mcan.sh)",
+  "license": "MIT",
+  "peerDependencies": {
+    "@svgr/webpack": "5.4.0",
+    "next": "9.4.4"
+  }
+}
