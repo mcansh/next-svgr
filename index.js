@@ -1,35 +1,37 @@
-module.exports = (pluginOptions = {
-  svgoConfig: {
-    plugins: [
-      { removeViewBox: false },
-      { removeDimensions: true },
-      {
-        prefixIds: {
-          delim: '_',
-          prefixIds: true,
-          prefixClassNames: false,
+module.exports = (
+  pluginOptions = {
+    svgoConfig: {
+      plugins: [
+        { removeViewBox: false },
+        { removeDimensions: true },
+        {
+          prefixIds: {
+            delim: "_",
+            prefixIds: true,
+            prefixClassNames: false,
+          },
         },
-      },
-    ],
-  },
-}) => (nextConfig = {}) => ({
+      ],
+    },
+  }
+) => (nextConfig = {}) => {
   return Object.assign({}, nextConfig, {
     webpack(config, options) {
       config.module.rules.push({
         test: /\.svg$/,
         use: [
           {
-            loader: '@svgr/webpack',
+            loader: "@svgr/webpack",
             options: pluginOptions.options,
           },
         ],
-      })
+      });
 
-      if (typeof nextConfig.webpack === 'function') {
-        return nextConfig.webpack(config, options)
+      if (typeof nextConfig.webpack === "function") {
+        return nextConfig.webpack(config, options);
       }
 
-      return config
-    }
-  })
-});
+      return config;
+    },
+  });
+};
