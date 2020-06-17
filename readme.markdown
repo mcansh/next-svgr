@@ -29,11 +29,9 @@ Optionally you can provide [options](https://github.com/gregberge/svgr/tree/mast
 ```js
 // next.config.js
 const withSVG = require("@mcansh/next-svgr")({
-  options: {
-    native: true,
-    svgoConfig: {
-      removeViewBox: true,
-    },
+  native: true,
+  svgoConfig: {
+    removeViewBox: true,
   },
 });
 module.exports = withSVG();
